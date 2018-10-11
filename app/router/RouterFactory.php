@@ -14,7 +14,8 @@ class RouterFactory
         $router = new RouteList();
 
         $frontRouter = $router[] = new RouteList('Front');
-        $frontRouter[] = new Route('/nette/<presenter>/<action=default>[/<id>]', 'Homepage:default');
+        $frontRouter[] = new Route('', 'Homepage:');
+        $frontRouter[] = new Route('/online-registrace/', 'OnlineRegistration:default');
 
         return $router;
     }

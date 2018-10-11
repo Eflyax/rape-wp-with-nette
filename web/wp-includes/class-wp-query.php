@@ -908,9 +908,18 @@ class WP_Query {
 		if ( $this->is_feed && ( !empty($qv['withcomments']) || ( empty($qv['withoutcomments']) && $this->is_singular ) ) )
 			$this->is_comment_feed = true;
 
-		if ( !( $this->is_singular || $this->is_archive || $this->is_search || $this->is_feed || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) || $this->is_trackback || $this->is_404 || $this->is_admin || $this->is_robots ) )
-			$this->is_home = true;
-
+		if ( !( $this->is_singular
+            || $this->is_archive
+            || $this->is_search
+            || $this->is_feed
+            || ( defined( 'REST_REQUEST' ) && REST_REQUEST )
+            || $this->is_trackback
+            || $this->is_404
+            || $this->is_admin
+            || $this->is_robots )
+        ) {
+            $this->is_home = true;
+        }
 		// Correct is_* for page_on_front and page_for_posts
 		if ( $this->is_home && 'page' == get_option('show_on_front') && get_option('page_on_front') ) {
 			$_query = wp_parse_args($this->query);
@@ -3035,7 +3044,7 @@ class WP_Query {
 			if ( is_array( $this->posts ) ) {
 				$this->found_posts = count( $this->posts );
 			} else {
-				if ( null === $this->posts ) {  
+				if ( null === $this->posts ) {
 					$this->found_posts = 0;
 				} else {
 					$this->found_posts = 1;

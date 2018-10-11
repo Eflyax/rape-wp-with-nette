@@ -19,7 +19,10 @@
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php
-			the_content();
+
+            echo $GLOBALS['nette_content'];
+
+            the_content();
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),

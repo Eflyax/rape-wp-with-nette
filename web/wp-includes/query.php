@@ -435,7 +435,6 @@ function is_home() {
 		_doing_it_wrong( __FUNCTION__, __( 'Conditional query tags do not work before the query is run. Before then, they always return false.' ), '3.1.0' );
 		return false;
 	}
-
 	return $wp_query->is_home();
 }
 
