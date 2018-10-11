@@ -1,0 +1,6 @@
+/.idea
+/vendor
+
+web/wp-admin/images/
+
+web/wp-includes/images/smilies/
