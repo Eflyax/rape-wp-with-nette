@@ -1,0 +1,12 @@
+application:
+    errorPresenter: Error:Error
+    mapping:
+        *: App\*Module\Presenters\*Presenter
+
+session:
+    expiration: 14 days
+    autoStart: auto
+
+extensions:
+
+services:
