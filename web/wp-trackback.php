@@ -40,7 +40,6 @@ function trackback_response($error = 0, $error_message = '') {
 		echo "</response>";
 	}
 }
-
 // Trackback is done by a POST.
 $request_array = 'HTTP_POST_VARS';
 
