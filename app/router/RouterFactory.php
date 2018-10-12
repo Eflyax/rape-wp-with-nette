@@ -14,7 +14,11 @@ class RouterFactory
         $router = new RouteList();
 
         $frontRouter = $router[] = new RouteList('Front');
-        $frontRouter[] = new Route('', 'Homepage:');
+        $frontRouter[] = new Route('', [
+            'presenter' => [Route::VALUE => 'Homepage',],
+            'action' => [Route::VALUE => 'default',],
+            'id' => null,
+        ]);
         $frontRouter[] = new Route('/online-registrace/', 'OnlineRegistration:default');
 
         return $router;
