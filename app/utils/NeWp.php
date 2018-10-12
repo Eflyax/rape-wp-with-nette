@@ -8,8 +8,12 @@ function insertNetteContent()
 function runNette()
 {
     ob_start();
-    echo $GLOBALS[NeWp::CONTAINER]->getByType(Nette\Application\Application::class)->run();
-    $GLOBALS[NeWp::CONTENT] = ob_get_contents();
+    try {
+        echo $GLOBALS[NeWp::CONTAINER]->getByType(Nette\Application\Application::class)->run();
+        $GLOBALS[NeWp::CONTENT] = ob_get_contents();
+    } catch (Nette\Application\BadRequestException $e) {
+        \Tracy\Debugger::log($e);
+    }
     ob_end_clean();
 }
 

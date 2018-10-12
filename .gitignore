@@ -5,3 +5,4 @@ web/wp-admin/images/
 web/wp-includes/images/smilies/
 app/config/config\.local\.neon
 app/config/deploy
+logs
