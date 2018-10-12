@@ -51,6 +51,7 @@ get_header(); ?>
 			<?php
 				get_search_form();
 
+            echo $GLOBALS['nette_content'];
 		endif;
 		?>
 

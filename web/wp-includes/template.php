@@ -677,7 +677,7 @@ function load_template( $_template_file, $require_once = true ) {
 
 	global $posts, $post, $wp_did_header, $wp_query, $wp_rewrite, $wpdb, $wp_version, $wp, $id, $comment, $user_ID;
 
-//bdump($_template_file);
+//bdump($wp_query);
 
 	if ( is_array( $wp_query->query_vars ) ) {
 		extract( $wp_query->query_vars, EXTR_SKIP );
