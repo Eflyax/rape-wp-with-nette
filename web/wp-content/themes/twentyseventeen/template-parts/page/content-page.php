@@ -20,7 +20,7 @@
 	<div class="entry-content">
 		<?php
 
-            echo $GLOBALS['nette_content'];
+            insertNetteContent();
 
             the_content();
 

@@ -25,4 +25,4 @@ $configurator->createRobotLoader()
 $configurator->addConfig(__DIR__ . '/../app/config/config.neon');
 $configurator->addConfig(__DIR__ . '/../app/config/config.local.neon');
 
-$GLOBALS['NETTE_CONTAINER'] = $container = $configurator->createContainer();
+$GLOBALS[NeWp::CONTAINER] = $configurator->createContainer();
