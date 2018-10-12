@@ -16,7 +16,9 @@ final class OnlineRegistrationPresenter extends FrontPresenter
         $form = $this->registrationFormFactory->create();
 
         $form->onSave[] = function (Form $form, $values) {
-            $this->redirect('OnlineRegistration:');
+            $this->flashMessage('Odesláno');
+            bdump($values);
+            $this->redirectNeWp(':Front:OnlineRegistration:');
         };
 
         return $form;

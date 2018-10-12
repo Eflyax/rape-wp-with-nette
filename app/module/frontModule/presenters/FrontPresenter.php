@@ -15,4 +15,14 @@ abstract class FrontPresenter extends Presenter
         $this->setLayout(self::LAYOUT_FRONT_TEMPLATE);
     }
 
+    public function redirectNeWp($destination, $arg = [])
+    {
+        if (isset($this->params['_fid'])) {
+            $arg['_fid'] = $this->params['_fid'];
+        }
+
+        header('Location: ' . $this->link($destination, $arg));
+        die();
+    }
+
 }
