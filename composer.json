@@ -22,9 +22,11 @@
   },
   "require": {
     "composer/installers": "^1.2",
+    "dg/ftp-deployment": "^3.0",
     "drupal-composer/preserve-paths": "0.1.*",
-    "johnpbloch/wordpress-core-installer": "^1.0",
     "johnpbloch/wordpress-core": "~4.9",
+    "johnpbloch/wordpress-core-installer": "^1.0",
+    "latte/latte": "^2.4",
     "nette/application": "^2.4",
     "nette/bootstrap": "^2.4.1",
     "nette/caching": "^2.5",
@@ -37,8 +39,7 @@
     "nette/safe-stream": "^2.3",
     "nette/security": "^2.4",
     "nette/utils": "^2.4",
-    "tracy/tracy": "^2.5",
-    "latte/latte": "^2.4"
+    "tracy/tracy": "^2.5"
   },
   "extra": {
     "installer-paths": {
