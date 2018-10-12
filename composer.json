@@ -51,9 +51,9 @@
       ]
     },
     "preserve-paths": [
-      "web/wp-config.php",
-      "web/wp-content/uploads"
+      "wp-config.php",
+      "wp-content/uploads"
     ],
-    "wordpress-install-dir": "web"
+    "wordpress-install-dir": ""
   }
 }

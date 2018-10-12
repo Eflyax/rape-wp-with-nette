@@ -3,6 +3,7 @@
 namespace App\FrontModule\Presenters;
 
 use Nette\Application\UI\Presenter;
+use Nette\Utils\Strings;
 
 abstract class FrontPresenter extends Presenter
 {
@@ -24,5 +25,13 @@ abstract class FrontPresenter extends Presenter
         header('Location: ' . $this->link($destination, $arg));
         die();
     }
+
+//    public function beforeRender()
+//    {
+//        parent::beforeRender();
+//        $this->template->addFilter('wordpress', function ($string) {
+//            return Strings::upper($string);
+//        });
+//    }
 
 }
