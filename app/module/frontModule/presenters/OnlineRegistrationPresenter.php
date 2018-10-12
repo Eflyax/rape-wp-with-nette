@@ -2,27 +2,24 @@
 
 namespace App\FrontModule\Presenters;
 
-use Nette\Forms\Form;
+use App\FrontModule\Components\RegistrationFormFactory;
+use Nette\Application\UI\Form;
 
 final class OnlineRegistrationPresenter extends FrontPresenter
 {
 
-    public function actionDefault()
+    /** @var RegistrationFormFactory @inject */
+    public $registrationFormFactory;
+
+    protected function createComponentRegistrationForm()
     {
-    }
+        $form = $this->registrationFormFactory->create();
 
-
-    protected function createComponentNetteForm()
-    {
-        $form = new Form();
-
-        $form->addText('name', 'Jméno')
-            ->setRequired('Zadje jméno!');
-
-        $form->addSubmit('submit', 'Potvrdit');
+        $form->onSave[] = function (Form $form, $values) {
+            $this->redirect('OnlineRegistration:');
+        };
 
         return $form;
     }
-
 
 }

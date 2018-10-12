@@ -12,3 +12,5 @@ extensions:
 services:
     router: App\Router\RouterFactory::createRouter
     - App\Model\Facade\CarFacade
+    - App\FrontModule\Components\RegistrationFormFactory
+    - BaseComponents\Forms\FormFactory
